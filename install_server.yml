@@ -1,5 +1,9 @@
 ---
 hosts: group1
 gather_facts: no
+
+vars:
+  path: /aa/bb
+
 roles:
   - common
