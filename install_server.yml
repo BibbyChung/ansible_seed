@@ -8,5 +8,5 @@
     path: /aa/bb
 
   roles:
-    - common
+#    - common
     - debug
