@@ -1,9 +1,12 @@
 ---
-hosts: group1
-gather_facts: no
+- name: my first example
+  hosts: group1
+  remote_user: root
+  gather_facts: no
 
-vars:
-  path: /aa/bb
+  vars:
+    path: /aa/bb
 
-roles:
-  - common
+  roles:
+    - common
+    - debug

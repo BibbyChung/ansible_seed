@@ -1,0 +1,8 @@
+---
+- name: "debug for global variables"
+  debug: msg= {{ app_path }}
+
+- name: "debug for a command message"
+  shell: /usr/bin/whoami
+  register: username
+  debug: msg= {{ username }}
