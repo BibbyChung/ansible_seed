@@ -1,8 +1,10 @@
 ---
-- name: debug for global variables
-  debug: msg= {{ app_path }}
+-  debug: msg= {{ group_var }}
+-  debug: msg= {{ host_var }}
+-  debug: msg= {{ play_book_var }}
 
 - name: debug for a command message
-  shell: /usr/bin/whoami
+  shell: echo 'Bibby Chung' 
   register: username
+
 - debug: msg= {{ username }}

@@ -1,11 +1,11 @@
 ---
 - name: my first example
-  hosts: group1
+  hosts: all
   remote_user: root
   gather_facts: no
 
   vars:
-    path: /aa/bb
+    play_book_var: play_book_var1
 
   roles:
 #    - common
