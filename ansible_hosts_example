@@ -1,0 +1,7 @@
+server1 ansible_host=127.0.0.1
+
+[group1]
+server1 ansible_ssh_user=root
+
+[all:children]
+group1
