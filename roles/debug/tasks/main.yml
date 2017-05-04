@@ -7,7 +7,7 @@
     msg: "{{ play_book_var }}"
 
 - name: debug for a command message
-  shell: echo 'Bibby Chung'
+  shell: "echo 'Bibby Chung'"
   register: username
 
 - debug:
