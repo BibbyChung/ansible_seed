@@ -1,16 +1,22 @@
 ---
+# http://docs.ansible.com/ansible/playbooks_conditionals.html
+
 - name: test condition => true
   shell: echo "show shell command => is_true_condition"
-  register: condition_true
   when: is_true_condition
 
-- debug:
-    msg: {{ condition_ture }}
-
 - name: test condition => false
-  shell: echo "show shell command => is_true_condition"
-  register: condition_false
-  when: !is_true_condition
+  shell: echo "show shell command => is_false_condition"
+  when: not is_true_condition
 
-- debug:
-    msg: {{ condition_false }}
+- name: test array
+  command: echo {{ item }}
+  with_items: [ 0, 2, 4, 6, 8, 10 ]
+  when: item > 5
+
+- name: test item in array
+  command: echo {{ item }}
+  with_items: [ 0, 2, 4, 6, 8, 10 ]
+  when:
+    - item > 5
+    - item in [ 8, 10 ]
