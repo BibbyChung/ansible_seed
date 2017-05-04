@@ -1,8 +1,16 @@
 ---
-- name: test condition
+- name: test condition => true
   shell: echo "show shell command => is_true_condition"
-  register: condition
+  register: condition_true
   when: is_true_condition
 
 - debug:
-    msg: {{ condition }}
+    msg: {{ condition_ture }}
+
+- name: test condition => false
+  shell: echo "show shell command => is_true_condition"
+  register: condition_false
+  when: !is_true_condition
+
+- debug:
+    msg: {{ condition_false }}
