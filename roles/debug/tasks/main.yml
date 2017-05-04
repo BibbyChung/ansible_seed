@@ -5,7 +5,6 @@
      msg: "{{ host_var }}"
 - debug:
     msg: "{{ play_book_var }}"
-# - debug: msg= "abcccccccc"
 
 - name: debug for a command message
   shell: echo 'Bibby Chung'

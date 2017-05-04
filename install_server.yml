@@ -8,6 +8,6 @@
     play_book_var: play_book_var1
 
   roles:
-#    - common
-    - debug
     - condition
+    - debug
+#    - common
