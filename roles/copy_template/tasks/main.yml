@@ -2,6 +2,6 @@
 # http://docs.ansible.com/ansible/template_module.html
 
 - template:
-    src: etc/ansible/hosts.tmp
-    dest: etc/ansible/hosts.tmp
+    src: etc/ansilbe/hosts.temp
+    dest: /etc/ansible/hosts.temp
     owner: root
