@@ -3,4 +3,10 @@
 #----global----
 group_var: "group_var1"
 
+#----condition----
 is_true_condition: true
+
+#----git----
+git_url: "git@github.com:BibbyChung/ansible_seed.git"
+git_local_path: "/opt/htdocs/ansible_seed"
+git_branch: "master"

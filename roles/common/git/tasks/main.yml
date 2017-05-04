@@ -1,0 +1,10 @@
+---
+- name: remove the path of {{ git_local_path }}
+  command: "{{ item }}"
+  with_items: 
+    - rm -rf {{ git_local_path }}
+
+- git:
+    repo: {{ git_url }}
+    dest: {{ git_local_path }}
+    version: {{ git_branch }}
