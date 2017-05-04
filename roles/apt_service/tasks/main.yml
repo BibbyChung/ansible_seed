@@ -2,7 +2,7 @@
 # http://docs.ansible.com/ansible/apt_module.html
 # http://docs.ansible.com/ansible/service_module.html
 
-- name: Update the repository cache and update package "nginx" to latest version using default release squeeze-backport
+- name: Update the repository cache and update package "nginx" to latest version 
   apt:
     name: nginx
     state: latest
@@ -12,3 +12,8 @@
   service:
     name: nginx
     state: restarted
+
+- name: Stop the nginx
+  service:
+    name: nginx
+    state: stopped
