@@ -1,4 +1,6 @@
 ---
 
 #----global----
-group_var: group_var1
+group_var: "group_var1"
+
+is_true_condition: true

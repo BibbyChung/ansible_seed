@@ -1,0 +1,6 @@
+---
+- name: test condition
+  shell: echo "show shell command => is_true_condition"
+  when: is_true_condition
+
+
