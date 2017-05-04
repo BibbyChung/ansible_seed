@@ -10,3 +10,8 @@ This project is a ansible example
 - apt-get install python-pip
 - apt-get install libssl-dev
 - pip install ansible==2.2.1.0
+- apt-get install ansible=2.1.1.0-1~ubuntu16.04.1
+
+
+## reference
+- google => ansible module documentation XXXXX 

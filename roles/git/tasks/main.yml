@@ -1,4 +1,6 @@
 ---
+# http://docs.ansible.com/ansible/git_module.html
+
 - name: "remove the path of {{ git_local_path }}"
   command: "{{ item }}"
   with_items: 

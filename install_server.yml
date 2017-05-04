@@ -8,7 +8,8 @@
     play_book_var: play_book_var1
 
   roles:
-    - git
+    - copy_template
+#    - git
 #    - condition
 #    - debug
 #    - common
