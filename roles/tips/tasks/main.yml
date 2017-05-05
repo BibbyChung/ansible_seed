@@ -14,8 +14,10 @@
 
 - name: users contain 'bb' => stdout_lines 
   shell: echo "bb"
-  when: 'bb' in all_users.stdout_lines
+  when: "'bb' in all_users.stdout_lines"
 
-- name: show users
+- name: show some users
   command: echo "{{ item }}"
   with_items: all_users.stdout_lines 
+  when: 
+    - item in ['bb', 'sshd']
