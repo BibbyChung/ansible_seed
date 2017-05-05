@@ -4,7 +4,7 @@
 - name: copy merge-hosts.sh to local
   copy:
     src: etc/hosts.d/merge-hosts.sh
-    dest: /etc/hosts.d/merge-hosts.sh
+    dest: /etc/hosts.d/
     owner: root
     mode: 0770
 
