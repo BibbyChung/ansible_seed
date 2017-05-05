@@ -1,0 +1,21 @@
+---
+#----- tip1 -------
+
+- name: get all users in your system
+  shell:  cat /etc/passwd | awk -F':' '{ print $1}'
+  register: all_users
+
+- debug: 
+    msg: "{{ all_users }}"
+
+- name: users contain 'bb' => find 
+  shell: echo "bb"
+  when: all_users.stdout.find('bb') != -1
+
+- name: users contain 'bb' => stdout_lines 
+  shell: echo "bb"
+  when: 'bb' in all_users.stdout_lines
+
+- name: show users
+  command: echo "{{ item }}"
+  with_items: all_users.stdout_lines 
