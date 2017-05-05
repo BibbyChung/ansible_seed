@@ -1,0 +1,12 @@
+---
+# http://docs.ansible.com/ansible/copy_module.html
+
+- name: copy merge-hosts.sh to local
+  copy:
+    src: etc/hosts.d/merge-hosts.sh
+    dest: /etc/hosts.d/merge-hosts.sh
+    owner: root
+    mode: 0770
+
+- name: merge hosts
+  shell: /etc/hosts.d/merge-hosts.sh
