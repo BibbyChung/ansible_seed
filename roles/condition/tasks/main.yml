@@ -7,6 +7,8 @@
 
 - name: test condition => false
   shell: "echo 'show shell command => is_false_condition'"
+  args:
+    chdir: "~/"  
   when: not is_true_condition
 
 - name: test array

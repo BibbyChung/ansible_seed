@@ -1,7 +1,8 @@
 ---
 # http://docs.ansible.com/ansible/template_module.html
 
-- template:
+- name: 'copy hosts.temp to the right way'
+  template:
     src: etc/ansible/hosts.temp
     dest: /etc/ansible/hosts.temp
     owner: root
